@@ -27,6 +27,10 @@ bool stats = YES;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
     
+    /* テキストフィールドのタイプをNumberPadに指定
+       注意：処理は未実装                        */
+    self.myTextField.keyboardType = UIKeyboardTypeNumberPad;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,5 +62,7 @@ bool stats = YES;
     }else{
         stats=NO;
     }
+}
+- (IBAction)countNumTF:(id)sender {
 }
 @end
