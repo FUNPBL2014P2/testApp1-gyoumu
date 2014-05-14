@@ -2,7 +2,7 @@
 //  ViewController.m
 //  testApp
 //
-//  Created by Shota Oda on 2014/05/14.
+//  Created by ; Oda on 2014/05/14.
 //  Copyright (c) 2014年 myname. All rights reserved.
 //
 
@@ -34,8 +34,10 @@ int x = 0;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)tapBtn:(id)sender {
-    self.myLabel.text = @"こんにちは";
+- (IBAction)UpBtn:(id)sender {
+    x++;
+    NSString *myStr =[NSString stringWithFormat:@"%d",x];
+    self.myLabel.text = myStr;
 }
 
 - (IBAction)ResetBtn:(id)sender {

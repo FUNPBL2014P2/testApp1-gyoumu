@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
-- (IBAction)tapBtn:(id)sender;
+- (IBAction)UpBtn:(id)sender;
+
 - (IBAction)ResetBtn:(id)sender;
 @end
