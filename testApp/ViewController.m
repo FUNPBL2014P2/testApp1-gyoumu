@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-int x = 100;
+int x = 0;
 
 - (void)viewDidLoad
 {
