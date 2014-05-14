@@ -14,4 +14,7 @@
 - (IBAction)UpBtn:(id)sender;
 
 - (IBAction)ResetBtn:(id)sender;
+
+- (IBAction)mySwitch:(UISwitch *)sender;
+
 @end

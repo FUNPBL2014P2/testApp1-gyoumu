@@ -15,6 +15,7 @@
 @implementation ViewController
 
 int x = 0;
+bool stats = YES;
 
 - (void)viewDidLoad
 {
@@ -33,16 +34,29 @@ int x = 0;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+   
 
 - (IBAction)UpBtn:(id)sender {
+    if(stats){
     x++;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
+    }
 }
 
 - (IBAction)ResetBtn:(id)sender {
+    if(stats){
     x = 0;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
+    }
+    }
+
+- (IBAction)mySwitch:(UISwitch *)sender {
+    if(sender.on==YES){
+        stats=YES;
+    }else{
+        stats=NO;
+    }
 }
 @end
