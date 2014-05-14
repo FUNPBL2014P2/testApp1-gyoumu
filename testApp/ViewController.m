@@ -26,6 +26,10 @@ int x = 0;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
     
+    /* テキストフィールドのタイプをNumberPadに指定
+       注意：処理は未実装                        */
+    self.myTextField.keyboardType = UIKeyboardTypeNumberPad;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,5 +48,7 @@ int x = 0;
     x = 0;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
+}
+- (IBAction)countNumTF:(id)sender {
 }
 @end

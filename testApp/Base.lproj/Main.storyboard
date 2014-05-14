@@ -43,11 +43,21 @@
                                     <action selector="UpBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qFO-SJ-h0q"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7L2-Nv-aBg">
+                                <rect key="frame" x="112" y="274" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="countNumTF:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="uMq-mx-f5W"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="yps-cO-P9j" id="XmP-oz-oQQ"/>
+                        <outlet property="myTextField" destination="7L2-Nv-aBg" id="uAr-XI-HAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
