@@ -48,6 +48,9 @@ bool stats = YES;
     }
 }
 
+- (IBAction)DownBtn:(id)sender {
+}
+
 - (IBAction)ResetBtn:(id)sender {
     if(stats){
     x = 0;

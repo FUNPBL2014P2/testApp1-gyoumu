@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
 - (IBAction)UpBtn:(id)sender;
 
+- (IBAction)DownBtn:(id)sender;
+
 - (IBAction)ResetBtn:(id)sender;
 
 - (IBAction)mySwitch:(UISwitch *)sender;
