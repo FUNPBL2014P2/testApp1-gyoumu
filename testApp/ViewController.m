@@ -49,6 +49,11 @@ bool stats = YES;
 }
 
 - (IBAction)DownBtn:(id)sender {
+    if(stats){
+        x--;
+        NSString *myStr =[NSString stringWithFormat:@"%d",x];
+        self.myLabel.text = myStr;
+    }
 }
 
 - (IBAction)ResetBtn:(id)sender {
