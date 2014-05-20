@@ -15,6 +15,9 @@
 @implementation ViewController
 
 int x = 0;
+    //カウンタの初期値
+int y = 1;
+    //カウンタ増加率
 bool stats = YES;
 
 - (void)viewDidLoad
@@ -42,7 +45,8 @@ bool stats = YES;
 
 - (IBAction)UpBtn:(id)sender {
     if(stats){
-    x++;
+    x = x + 1*y;
+    
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
     }
@@ -50,7 +54,9 @@ bool stats = YES;
 
 - (IBAction)DownBtn:(id)sender {
     if(stats){
-        x--;
+        x = x - 1*y;
+        if(x < 0) x = 0;
+        //カウンタが０未満にならないようにする
         NSString *myStr =[NSString stringWithFormat:@"%d",x];
         self.myLabel.text = myStr;
     }
@@ -61,6 +67,7 @@ bool stats = YES;
     x = 0;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
+        
     }
     }
 
@@ -72,5 +79,6 @@ bool stats = YES;
     }
 }
 - (IBAction)countNumTF:(id)sender {
+     y = [self.myTextField.text intValue];
 }
 @end
