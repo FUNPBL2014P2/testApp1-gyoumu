@@ -18,7 +18,7 @@ int x = 0;
     //カウンタの初期値
 int y = 1;
     //カウンタ増加率
-bool stats = YES;
+bool state = YES;
 
 - (void)viewDidLoad
 {
@@ -44,7 +44,7 @@ bool stats = YES;
    
 
 - (IBAction)UpBtn:(id)sender {
-    if(stats){
+    if(state){
     x = x + 1*y;
     
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
@@ -53,7 +53,7 @@ bool stats = YES;
 }
 
 - (IBAction)DownBtn:(id)sender {
-    if(stats){
+    if(state){
         x = x - 1*y;
         if(x < 0) x = 0;
         //カウンタが０未満にならないようにする
@@ -63,7 +63,7 @@ bool stats = YES;
 }
 
 - (IBAction)ResetBtn:(id)sender {
-    if(stats){
+    if(state){
     x = 0;
     NSString *myStr =[NSString stringWithFormat:@"%d",x];
     self.myLabel.text = myStr;
@@ -72,13 +72,19 @@ bool stats = YES;
     }
 
 - (IBAction)mySwitch:(UISwitch *)sender {
-    if(sender.on==YES){
-        stats=YES;
-    }else{
-        stats=NO;
-    }
+        state=[sender isOn];
 }
+
 - (IBAction)countNumTF:(id)sender {
      y = [self.myTextField.text intValue];
+    if(!y)y=1;
 }
+
+/*画面外タップでナンバーパッドが消える機能*/
+-(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.myTextField resignFirstResponder];
+    y = [self.myTextField.text intValue];
+    if(!y)y=1;
+    }
 @end
